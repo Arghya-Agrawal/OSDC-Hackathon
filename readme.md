@@ -10,10 +10,10 @@ Converters are direct action department that ensure your hard earned money doesn
 
 ## How to calculate your currency's worth
 
-1 Firstly,select the currency your vacation money is.
-2 Then select the currency you want to convert it in.
-3 Then choose the time around which your travel is based.
-4 Hit the go button and your money in that particular time and place can be withdrawed from the machine.
+1. Firstly,select the currency your vacation money is.
+2. Then select the currency you want to convert it in.
+3. Then choose the time around which your travel is based.
+4. Hit the go button and your money in that particular time and place can be withdrawed from the machine.
 
 ## How to modify the project to suit your own needs
 
