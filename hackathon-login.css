@@ -44,7 +44,7 @@
     text-align: center;
     margin: 275px auto 0px;
     background-color: aliceblue;
-    height: 150px;
+    height: 200px;
     width: 350px;
     z-index: 1;
 }
@@ -58,5 +58,5 @@ form{
     justify-content: space-evenly;
 }
 input{
-    padding:15px 5px;
+    padding:12px 5px;
 }

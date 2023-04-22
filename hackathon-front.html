@@ -8,17 +8,104 @@
 </head>
 <link rel="stylesheet" href="hackathon-front.css">
 <body>
-    <section class="main">
+    <section id="home">
+        <section class="navbar">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </section>
+        <section class="main">
         <section class="text">
         <h1>OUT OF TIME</h1>
-        <h2>Welcome to the place where <span>time</span> ends</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae explicabo, minima, excepturi ratione quis sed alias impedit molestias ipsum totam fugiat necessitatibus blanditiis error accusantium aliquid, illum quasi laborum cum tenetur id voluptatum laboriosam. Architecto quas qui eaque voluptatibus assumenda.</p>
-        </section>
+        <p>Welcome to the place where <span>Time</span> dosent exist.</p>
         <section class="login">
-            <a href="project3-2.html" ><button>New Traveller</button></a>
-            <a href="project3-2.html"><button>Experienced Traveller</button></a>
+            <a href="hackathon-signup.html" ><button>New Traveller</button></a>
+            <a href="hackathon-login.html"><button>Experienced Traveller</button></a>
+        </section>
+        </section>
+        <section class="img">
+            <img src="images/hackatho-osdc/logo.png">
+        </section>
         </section>
     </section>
-    
+    <section id="aboutus">
+        <ul>
+            <li><a class="active-link" id="link-1" onclick="opentab('link-1','overview')" >Overview</a></li>
+            <li><a id="link-2" class="link" onclick="opentab('link-2','what')">What We do</a></li>
+            <li><a id="link-3" class="link" onclick="opentab('link-3','education')">Education</a></li>
+        </ul>
+        <section id="overview" class="active-tab about">
+            <ul>
+            <li>We are a standard currency regulator required for a traveller to take his money in any
+                point of time
+            </li>
+            <li>We protect traveller's money from factors like inflation and deflation providinng
+                fair means to all travellers
+            </li>
+            <li>
+                We prevent travellers from using unfair means 
+
+            </li>
+            </ul>
+            <img src="images/hackatho-osdc/paisa.png">
+        </section>
+        <section id="what" class="about" >
+
+            <section class="what-main">
+                <section class="what-main-box">
+                    <h2>Pay Someone Money</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ipsa architecto iusto magni! Fuga tenetur eaque repellendus qui saepe sit?</p>
+                </section>
+                <section class="what-main-box">
+                    <h2>
+                        Time Travel with ur money
+                    </h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ipsa architecto iusto magni! Fuga tenetur eaque repellendus qui saepe sit?</p>
+                </section>
+                <section class="what-main-box">
+                    <h2>
+                        Your money's worth at any instance
+                    </h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ipsa architecto iusto magni! Fuga tenetur eaque repellendus qui saepe sit?</p>
+                </section>
+            </section>
+        </section>
+        <section id="education" class="about">
+            <section class="main3">
+            <section class="text-2">
+            <p>Throughout time the valuation of your money changes because of inflation and deflation
+                We have a formula that changes value of your money and adjusts it according to your currency
+                value and inflation and deflation rates.
+            </p>
+            <p>For example: You are a traveller and you have 50,000 in 2022 and you have to go to 1800 ,You cannot take
+                50,000 to that time as that would be a very enormous value.This also applies when you go to the future as you
+                will need more money due to inflation.
+            </p>
+            <p>We will provide you with the correct evaluation of your money so you can enjoy ur time travelling journey.
+            </p>
+            </section>
+            <section class="img2">
+                <img src="images/hackatho-osdc/book.png">
+            </section>
+            </section>
+        </section>
+    </section>
+    <script>
+        function opentab(link,name){
+            document.getElementById("link-1").classList.remove("active-link");
+            document.getElementById("link-2").classList.remove("active-link");
+            document.getElementById("link-3").classList.remove("active-link");
+
+            document.getElementById(link).classList.add("active-link");
+
+            document.getElementById("overview").classList.remove("active-tab");
+            document.getElementById("what").classList.remove("active-tab");
+            document.getElementById("education").classList.remove("active-tab");
+
+            document.getElementById(name).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>

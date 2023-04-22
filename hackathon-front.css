@@ -1,52 +1,113 @@
-.main{
-    position: fixed;
-    top: 0;
-    left: 0;
+body{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+#home{
+    margin-bottom: 0;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
 
 }
-.main::before{
+#home::before{
     content: " ";
     position: absolute;
-    background: url(images/hackatho-osdc/bttf-1.png);
+    background-color: #000;;
     background-size: cover;
     height: 100vh;
     width: 100%;
     z-index: -1;
     opacity: 0.9;
 }
+.navbar{
+    width: 100%;
+    height: 100px;
+}
+.navbar ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(241, 235, 235);
+    margin-right: 155px;
+    font-size: 25px;
+    position: relative;
+}
+
+.navbar ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #f5d86f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navbar a.active::after{
+    width: 100%;
+
+}
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
 .text{
     margin-left: 20px;
-    color: rgb(19, 19, 19);
-    text-align: left;
-    width: 41%;
-    height: fit-content;
+    color: rgb(253, 252, 252);
+    text-align: center;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.login{
-    width: 41%;
-    margin-left: 20px;
-
-    height: fit-content;
-}
-
 .text h1{
-    color:#9573cf;
-    font-size: 60px;
-}
-.text h2{
-    color:#c180dd;
-
-    font-size: 35px;
+    margin-top: 150px;
+    color:#f7f6f9;
+    font-size: 90px;
+    margin-bottom: 15px;
 }
 .text p{
-    font-size: 25px;
+    margin-top: 0;
+    font-size: 20px;
 }
+.img{
+    margin-left: 100px;
+    width: 600px;
+    height: 500px;
+}
+.img img{
+    height: 600px;
+    width: 550px;
+}
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+    height: fit-content;
+}
+
+
+
 button{
+    color: white;
     background-color: transparent;
     border-radius: 15px;
     margin:10px 20px 0px 0px; 
@@ -54,7 +115,130 @@ button{
     transition: 0.5s;
 }
 button:hover{
-    background-color: #9573cf;
-    border-color: rgb(18, 18, 18);
-    color: black;
+    border-color: #f5d86f;
+}
+span{
+    color:#f5d86f
+}
+#aboutus{
+    margin-top: 0;
+    height: 70vh;
+    width: 100%;
+}
+#aboutus h1{
+    font-size: 80px;
+}
+#aboutus ul{
+    padding: 0px 0px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#aboutus ul li{
+    list-style: none;
+    margin-right: 30px;
+}
+#aboutus ul li a{
+    font-size: 30px;
+    position: relative;
+}
+
+#aboutus ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #111111;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+#aboutus a.active-link::after{
+    width: 100%;
+    
+}
+#aboutus ul li a:hover::after{
+    width: 100%;
+}
+#overview{
+    text-align: center;
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#overview p{
+    font-size: 30px;
+}
+#aboutus .about{
+    display: none;
+    height: 50%;
+    width: 99%;
+}
+#aboutus .active-tab{
+    display: block;
+}
+#aboutus .what-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 300px;
+    width: 100%;
+}
+#aboutus .what-main-box{
+    color: white;
+    text-align: center;
+    height: 250px;
+    width:28%;
+    border: 2px solid black;
+    padding:0px 15px 15px 15px;
+    position: relative;
+    box-shadow:0px 0px 20px 0px black ;
+    
+}
+#aboutus .what-main-box p{
+    color: #000;
+    margin-top: 70px;
+}
+#aboutus .what-main-box::before{
+    content: ' ';
+    width: 100%;
+    height: 28%;
+    background-color: #111111;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    
+}
+#overview ul{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+#overview ul li{
+    font-size: 25px;
+}
+#overview img{
+    height:300px;
+    width: 700px;
+}
+#education{
+    display: flex;
+    flex-direction: row;
+}
+#education p{
+    font-size: 25px;
+}
+#education .text-2{
+    width: 60%;
+    height: 100%;
+}
+.img2{
+    width: 30%;
+}
+.img2 img{
+    width: 30%;
 }

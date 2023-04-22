@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<link rel="stylesheet" href="hackathon-signup.css">
+<body>
+    <section class="main">
+    <section class="past">
+    
+    </section>
+    <section class="future">
+
+    </section>
+    <section class="signup">
+        <h2>SIGN UP</h2>
+            <input type="text" placeholder="Enter Your Name" required id="name">
+            <input type="text" placeholder="Enter Your Gender" required id="gender">
+            <input type="text" placeholder="Enter Your Email Id" id="username" required>
+            <input type="text" placeholder="Create New password" required id="password">
+            <button id="signup">Sign Up</button>
+
+    </section>
+    </section>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+        import { getFirestore ,doc, setDoc ,collection, addDoc ,getDoc , query,where, getDocs} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDS-r3tAubD6S5iRYZ1NWQbp7rB_9WdY6A",
+          authDomain: "timepe-294c2.firebaseapp.com",
+          projectId: "timepe-294c2",
+          storageBucket: "timepe-294c2.appspot.com",
+          messagingSenderId: "109888838956",
+          appId: "1:109888838956:web:376dda54f7f84b6861a089"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+
+        var username=document.getElementById("username");
+        var name=document.getElementById("name");
+        var password=document.getElementById("password");
+        var gender=document.getElementById("gender");
+        var coins=0;
+
+
+        document.getElementById("signup").addEventListener('click',function(){
+
+
+            createUserWithEmailAndPassword(auth, username.value, password.value)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+                alert("created");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorMessage);
+            });
+
+
+            const docRef =  addDoc(collection(db, "users"), {
+                coins: coins,
+                gender: gender.value,
+                name: name.value,
+                password: password.value,
+                username: username.value
+                
+                
+            });
+            console.log("Document written with ID: ", docRef.id);
+        })
+
+
+      
+
+      </script>
+</body>
+</html>
