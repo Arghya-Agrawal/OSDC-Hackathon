@@ -40,5 +40,8 @@ While using the converter,if you run into any fata bug that can affect the code'
 
 ## Acknowledgements
 
+Dr. Anita Sahoo, Proffessor at Jaypee Institue of Information Technology
+Github for coding issues
+
 
 
