@@ -35,7 +35,7 @@ Voila! Code has been modified to suit needs and ready to be used.
 
 ## How to submit a bug
 
-While using the converter,if u run into any kind of issue,you can submit a request to support@timeinsenscon.mail.com or,if you already have the solution to fix the bug then attach it with the support mail.
+While using the converter,if u run into any kind of issue,you can submit a request to support@timepecustcare.mail.com or,if you already have the solution to fix the bug, then attach it with the support mail.
 
 ## Acknowledgements
 
