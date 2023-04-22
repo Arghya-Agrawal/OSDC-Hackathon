@@ -1,12 +1,13 @@
 # Currency Converter not relying on the time
+
 >This project ensures that Your money retains its value as you travel through time to enjoy your favourite scenarios.
 
 
-Currency Converter are offices which are tasked with changing and retaining the value your money holds no matter which country you want to spend it in.However,contermpory and traditional converters highly rely on time and present forex and World trade situations.Thus we present to you the converter free of the known limitations of the present converters
+Currency Converter are offices which are tasked with changing and retaining the value your money holds no matter which country you want to spend it in.However, contempory and traditional converters rely highly on time and prevailing forex and World trade conditions. Thus we present to you the converter free of the known limitations of the exisiting currency exchangers.
 
 ## What is a currency converter?
 
-Converters are direct action department that ensure your hard earned money doesn't betray you when you decide to travel to a different country for your hard earned vacation.However,they are highly vulnerable to the changes in the forex and World situations which can cause unwanted and unprecedented inflation and deflation in the value of your bank,thus,directly affecting the cash in-hand you decided to enjoy while on vacation.This directly affects 
+Converters are direct action department that ensure your hard earned money doesn't betray you when you decide to travel to a different country for your hard earned vacation.However,they are highly vulnerable to the changes in the forex and World situations which can cause unwanted and unprecedented inflation and deflation in the value of your bank, thus, directly affecting the cash in-hand you decided to enjoy while on vacation.This directly affects your financial capabilties in the time period you wish to enjoy caused by the inflation or deflation in the currency's worth over the time and World scenarios pertaining to that time
 
 
 ## How this solves the issue?
@@ -35,7 +36,7 @@ Voila! Code has been modified to suit needs and ready to be used.
 
 ## How to submit a bug
 
-While using the converter,if u run into any kind of issue,you can submit a request to support@timepecustcare.mail.com or,if you already have the solution to fix the bug, then attach it with the support mail.
+While using the converter,if you run into any fata bug that can affect the code's usability, you can submit a request to support@timepecustcare.mail.com. Any and every help which can resolve the bug is greatly appreciated and can be itself attached with the support mail created.
 
 ## Acknowledgements
 
