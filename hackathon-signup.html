@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +12,19 @@
 <link rel="stylesheet" href="hackathon-signup.css">
 <body>
     <section class="main">
-    <section class="past">
-    
-    </section>
-    <section class="future">
-
-    </section>
+        <section class="img">
+            <img src="images/hackatho-osdc/signup.png">
+        </section>
     <section class="signup">
-        <h2>SIGN UP</h2>
+        <section class="form">
+
             <input type="text" placeholder="Enter Your Name" required id="name">
             <input type="text" placeholder="Enter Your Gender" required id="gender">
+            <input type="text" placeholder="Traveller's Year Of Origin" required id="year">
             <input type="text" placeholder="Enter Your Email Id" id="username" required>
             <input type="text" placeholder="Create New password" required id="password">
-            <button id="signup">Sign Up</button>
+           <button id="signup">Sign Up</button>
+        </section>
 
     </section>
     </section>
@@ -51,6 +54,7 @@
         var name=document.getElementById("name");
         var password=document.getElementById("password");
         var gender=document.getElementById("gender");
+        var year=document.getElementById("year");
         var coins=0;
 
 
@@ -63,30 +67,46 @@
                 const user = userCredential.user;
                 // ...
                 alert("created");
+                window.location.href = "http://127.0.0.1:5500/hackathon-menu.html";
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // ..
-                console.log(errorMessage);
+                alert(errorMessage);
             });
 
 
-            const docRef =  addDoc(collection(db, "users"), {
+            adddoc();
+
+            
+        })
+
+
+        async function adddoc(){
+            var ref=doc(db,"users2",username.value);
+
+            const docRef=await setDoc(
+                ref,{
+                
                 coins: coins,
                 gender: gender.value,
                 name: name.value,
                 password: password.value,
-                username: username.value
+                username: username.value,
+                year:year.value,
                 
-                
-            });
-            console.log("Document written with ID: ", docRef.id);
-        })
+
+                }
+            )
+        }
 
 
       
 
       </script>
+
+
+    
 </body>
 </html>

@@ -1,29 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<link rel="stylesheet" href="hackathon-login.css">
+<link rel="stylesheet" href="hackathon-signup.css">
 <body>
     <section class="main">
-    <section class="past">
+        <section class="img">
+            <img src="images/hackatho-osdc/signup.png">
+        </section>
+    <section class="signup">
+        <section class="form authdiv">
+
+
+            <input id="username" type="text" placeholder="Enter Your Email Id" required>
+            <input id="password" type="text" placeholder=" Password" required >
+            <button id="signin">Login</button>
+        </section>
+        <div class="log">
+            <button id="logout">logout</button>
+            <button id="show">showinfo</button>
+        </div>
     
-    </section>
-    <section class="future">
 
     </section>
-    <section class="login">
-        <h2>LOGIN</h2>
-        <form>
-            <input type="text" placeholder="Enter Your Email Id" required>
-            <input type="text" placeholder="Enter Your password" required>
-            <input type="submit">
+    </section>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+        import {  getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+        import { getFirestore ,doc, setDoc ,collection, addDoc ,getDoc , query, where, getDocs} from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
 
-        </form>
-    </section>
-    </section>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDS-r3tAubD6S5iRYZ1NWQbp7rB_9WdY6A",
+          authDomain: "timepe-294c2.firebaseapp.com",
+          projectId: "timepe-294c2",
+          storageBucket: "timepe-294c2.appspot.com",
+          messagingSenderId: "109888838956",
+          appId: "1:109888838956:web:376dda54f7f84b6861a089"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+
+        var username=document.getElementById("username");
+        var password=document.getElementById("password");
+        var name="";
+        var gender="";
+        var coins=0;
+
+        
+
+
+        document.getElementById("signin").addEventListener('click',function(){
+
+            signInWithEmailAndPassword(auth, username.value, password.value)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+                alert("signed in")
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+          
+        })
+
+       
+
+          
+           
+        async function getadoc(){
+
+            const username1=document.getElementById("username");
+            const password1=document.getElementById("password");
+           
+            const q = query(collection(db, "users2"), where("username", "==", username1.value));
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            });
+
+        }
+
+        document.getElementById("show").addEventListener('click',function(){
+
+            getadoc();
+        });
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const uid = user.uid;
+            var useremail=user.username;
+            console.log(user);
+            
+           document.getElementsByClassName("log")[0].style.display=""
+           document.getElementsByClassName("authdiv")[0].style.display="none"
+           
+            
+            // ...
+        } else {
+            
+            document.getElementsByClassName("log")[0].style.display="none"
+            document.getElementsByClassName("authdiv")[0].style.display=""
+        }
+        });
+
+
+        document.getElementById("logout").addEventListener('click',function(){
+
+
+            signOut(auth).then(() => {
+            // Sign-out successful.
+            alert("signout successful")
+            }).catch((error) => {
+            // An error happened.
+            console.log(error)
+            });
+        })
+
+</script>
 </body>
 </html>

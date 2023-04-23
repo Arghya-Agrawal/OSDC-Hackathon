@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0px 0px;
     padding: 0px 0px;
@@ -117,7 +120,7 @@ button{
 button:hover{
     border-color: #f5d86f;
 }
-span{
+#home span{
     color:#f5d86f
 }
 #aboutus{
@@ -131,7 +134,7 @@ span{
 #aboutus ul{
     padding: 0px 0px;
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -163,6 +166,7 @@ span{
     width: 100%;
 }
 #overview{
+    margin-top: 35px;
     text-align: center;
     height:50%;
     display: flex;
@@ -170,13 +174,26 @@ span{
     justify-content: center;
     align-items: center;
 }
-#overview p{
+#overview ul{
+    height:110px;
+    margin-bottom: 0px;
+}
+#overview span{
+    font-size: 30px;
+    font-weight: 600;
+}
+#overview li{
+    margin-bottom: 8px;
     font-size: 30px;
 }
+
 #aboutus .about{
     display: none;
     height: 50%;
     width: 99%;
+}
+#what{
+    margin-top: 60px;
 }
 #aboutus .active-tab{
     display: block;
@@ -213,6 +230,7 @@ span{
     left: 0;
     
 }
+
 #overview ul{
     padding-left: 15px;
     display: flex;
@@ -225,20 +243,46 @@ span{
     height:300px;
     width: 700px;
 }
-#education{
+.main3{
+    margin-top: 30px;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
 #education p{
     font-size: 25px;
+    margin-bottom: 30px;
 }
 #education .text-2{
+    padding-left: 15px;
     width: 60%;
     height: 100%;
 }
 .img2{
-    width: 30%;
+    display: flex;
+    justify-content:flex-end;
+    margin-left: 20px;
+    width: 37%;
+    height: 100%;
 }
 .img2 img{
-    width: 30%;
+    width: 80%;
+    height: 100%;
+}
+#education span{
+    font-weight: 600;
+}
+#education a{
+    margin-right: 8px;
+    color: #000;
+    margin-top: 0;
+    font-size: 20px;
+}
+#education a:hover + i{
+    color: blueviolet;
+
+}
+#education a:hover{
+    color: blueviolet;
+
 }
