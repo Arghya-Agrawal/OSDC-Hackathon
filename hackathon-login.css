@@ -13,7 +13,7 @@ body{
     height: 100%;
 }
 .img img{
-    width: 100%;
+    width: 106%;
     height: 100%;
 }
 
@@ -70,4 +70,10 @@ div{
 }
 .radio{
     margin-right: 25px;
+}
+.log{
+    margin:auto auto;
+}
+.showinfo p{
+    color: aliceblue;
 }

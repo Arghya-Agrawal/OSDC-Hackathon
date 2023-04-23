@@ -205,6 +205,9 @@ button:hover{
     height: 300px;
     width: 100%;
 }
+.what-main-box p{
+    font-size: 20px;
+}
 #aboutus .what-main-box{
     color: white;
     text-align: center;
